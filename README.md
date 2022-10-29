@@ -7,6 +7,8 @@
 ```
 pip3 install -r requirements.txt
 ```
+* Copy and paste the Classes into your Source or Main Python File
+* 
 ##### Step2 : Use Connector Object or Create instance 
 
 ```
@@ -33,6 +35,12 @@ helper = DatabaseAurora(
     )
 )
 ```
+
+##### OR
+```
+helper = Connector.DB_AURORA_PSYCOPG2.value
+```
+
 ##### Step3 :Access All Methods in Class Easily 
 
 ##### Create table 
