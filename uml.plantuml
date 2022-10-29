@@ -36,17 +36,9 @@ package "Database Modules"   #DDDDDD{
     }
 }
 
-
-package "Client"{
-     enum Connector{
-        DB_AURORA_PSYCOPG2 = DatabaseAurora
-    }
-}
-
     Settings *-- DatabaseAurora : Has A
     error_handling_with_logging *--  DatabaseAurora: Has A
     Logger *-- DatabaseAurora : Has A
     Interface <-- DatabaseAurora  : Inherits
-    DatabaseAurora *-- Connector: Has A
 
 @enduml

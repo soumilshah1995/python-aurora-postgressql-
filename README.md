@@ -36,10 +36,6 @@ helper = DatabaseAurora(
 )
 ```
 
-##### OR
-```
-helper = Connector.DB_AURORA_PSYCOPG2.value
-```
 
 ##### Step3 :Access All Methods in Class Easily 
 
@@ -91,5 +87,5 @@ helper = Connector.DB_AURORA_PSYCOPG2.value
 
 ```
 ##### Class Diagram 
-![image](https://user-images.githubusercontent.com/39345855/198846504-f36b0502-8578-4001-af46-f756de01e08c.png)
+![image](https://user-images.githubusercontent.com/39345855/198847210-6cd66dd5-02ce-45b2-a2e1-9a8b74da3630.png)
 
