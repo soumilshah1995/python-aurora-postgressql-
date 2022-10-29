@@ -1,5 +1,8 @@
 ## Learn how to Connect|insert|Read| Write Bulk Data into Aurora Postgres using Python psycopg2
 
+##### Class Diagram 
+![image](https://user-images.githubusercontent.com/39345855/198848086-17fa239d-3728-4616-b110-a690752bbe18.png)
+
 # How to use 
 ### Steps
 
@@ -95,6 +98,4 @@ helper = DatabaseAurora(
             break
 
 ```
-##### Class Diagram 
-![image](https://user-images.githubusercontent.com/39345855/198848086-17fa239d-3728-4616-b110-a690752bbe18.png)
 
