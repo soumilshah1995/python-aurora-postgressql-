@@ -13,7 +13,6 @@ try:
     import psycopg2
 
     import psycopg2.extras as extras
-    from faker import Faker
 
 except Exception as e:
     raise Exception("Error : {}".format(e))
