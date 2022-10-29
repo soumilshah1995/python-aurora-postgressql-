@@ -17,17 +17,6 @@ try:
 except Exception as e:
     raise Exception("Error : {}".format(e))
 
-DATA = {
-    "AURORA_DB_SERVER": "XXXXXXXXXXXom",
-    "AURORA_DB_PORT": "5432",
-    "AURORA_DB_UID": "XXXXXXXX",
-    "AURORA_DB_PWD": "XXXX",
-    "AURORA_DB_DATABASE": "XXX",
-}
-
-for key, value in DATA.items():
-    os.environ[key] = value
-
 
 class Logging(object):
     def __init__(self):
@@ -108,7 +97,7 @@ class DatabaseInterface(ABC):
         :return: Dict
         """
 
-    def execute(self, query, value):
+    def execute(self, query, data):
         """
         Inserts data into SQL Server
         :param query:  Str

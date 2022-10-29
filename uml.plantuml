@@ -2,8 +2,8 @@
 
 package "Interface"  #DDDDDD {
     abstract Interface{
-          get_data(self, query) -> Dict
-          execute(self, query, value):
+          get_data(self, query)
+          execute(self, query, data):
           insert_many(self, query, data):
           get_data_batch(self, batch_size=10, query=""):
     }

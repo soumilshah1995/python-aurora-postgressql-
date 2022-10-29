@@ -53,11 +53,6 @@ helper = DatabaseAurora(
                     city character varying(256) COLLATE pg_catalog."default",
                     state character varying(256) COLLATE pg_catalog."default"
                 )
-                
-                TABLESPACE pg_default;
-                
-                ALTER TABLE IF EXISTS public.users
-                    OWNER to postgres;
     """
     logger.logger.info("Creating Tables")
     response = helper.execute(query=query, data=None)
@@ -65,6 +60,19 @@ helper = DatabaseAurora(
 
 ##### Bulk Inserts 
 ```
+    query = """INSERT INTO public.users
+                                        (
+                                        first_name,
+                                        last_name,
+                                        address,
+                                        text,
+                                        id,
+                                        city,
+                                        state
+                                        )
+                                    VALUES (%s, %s, %s, %s, %s, %s,%s)"""
+    
+
     data = [
         {'first_name': 'Jasmin', 'last_name': 'Cox', 'address': '21610 Guzman Burg\nNorth Daniel, CT 53547', 'text': 'International job so perhaps decide whether see. Water prove house direction may off. Which hotel rule guy base thing.', 'id': 'ffe6fb75-a0a5-4407-b35a-bf183d6940fc', 'city': 'North Sheilashire', 'state': 'Missouri'},
         {'first_name': 'Michael', 'last_name': 'Hubbard', 'address': '462 Kevin Harbor Apt. 593\nCodyfort, NH 20624', 'text': 'Dark these partner hope. Article doctor fine room star. Why without different control.\nForget into apply forget project when. Put look also deep air.', 'id': '21a3d9b9-534a-481a-8c79-db71c8aeded2', 'city': 'West Paul', 'state': 'Alabama'}
@@ -88,5 +96,5 @@ helper = DatabaseAurora(
 
 ```
 ##### Class Diagram 
-![image](https://user-images.githubusercontent.com/39345855/198847210-6cd66dd5-02ce-45b2-a2e1-9a8b74da3630.png)
+![image](https://user-images.githubusercontent.com/39345855/198848086-17fa239d-3728-4616-b110-a690752bbe18.png)
 
