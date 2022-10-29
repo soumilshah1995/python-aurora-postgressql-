@@ -191,13 +191,3 @@ class DatabaseAurora(DatabaseInterface):
         return {"statusCode": 200, "data": True}
 
 
-class Connector(Enum):
-    DB_AURORA_PSYCOPG2 = DatabaseAurora(
-        data_base_settings=Settings(
-            port=os.getenv("AURORA_DB_PORT"),
-            server=os.getenv("AURORA_DB_SERVER"),
-            username=os.getenv("AURORA_DB_UID"),
-            password=os.getenv("AURORA_DB_PWD"),
-            database_name=os.getenv("AURORA_DB_DATABASE"),
-        )
-    )
